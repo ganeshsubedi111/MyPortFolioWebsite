@@ -129,24 +129,20 @@
 
       <div class="intro-content">
         <div class="row">
-          <div class="col-twelve">
-            <h5>Hi.</h5>
-            <h1>
-              I<span style="color: #E85C0D;">'</span>m Ganesh Subedi<span
-                style="color: #E85C0D;"
-                >.</span
-              >
-            </h1>
-
-            <p class="intro-position">
-              <span>Web Developer</span>
-              <span>Designer</span>
-            </p>
-
-           
-          </div>
+            <div class="col-twelve">
+                <h5 id="greeting"></h5>
+                <h1 id="name"></h1>
+                <p class="intro-position">
+                    <span id="position"></span>
+                </p>
+            </div>
         </div>
-      </div>
+    </div>
+    
+    
+    
+    
+    
       <!-- /intro-content -->
     </section>
     <!-- /intro -->
@@ -169,14 +165,9 @@
 
       <div class="row about-content">
         <div class="col-six tab-full">
-          <h3>Profile</h3>
+          <h3>My Introduction</h3>
           <p>
-            A Bachelor of Science in Computer Science and Information Technology
-            (B.Sc.CSIT) student from Soch College of IT, currently working as an
-            MVC .NET Developer. I have an excellent academic background and a
-            diverse skill set, with experience in web development. I am
-            well-versed in the MVC pattern, REST APIs, and have a foundational
-            knowledge of JavaScript, CSS, and React.js.
+            I am a Bachelor of Science in Computer Science and Information Technology (B.Sc.CSIT) graduate from Soch College of IT, currently working as an MVC .NET Developer. With a solid academic foundation and a diverse skill set, I have hands-on experience in web development, specializing in the MVC pattern, REST APIs, and front-end technologies such as JavaScript, CSS, and React.js. My background allows me to approach software development with both technical expertise and practical problem-solving abilities."
           </p>
 
           <ul class="info-list">
@@ -677,3 +668,51 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const greetingText = "Hi";
+    const fullText = " I am Ganesh Subedi";
+    const positionText = " Web Developer | Designer";
+
+    const greetingElement = document.getElementById("greeting");
+    const nameElement = document.getElementById("name");
+    const positionElement = document.getElementById("position");
+
+    let greetingIndex = 0;
+    let nameIndex = 0;
+    let positionIndex = 0;
+
+    function typeWriter(element, text, index, callback) {
+        if (index < text.length) {
+            element.innerHTML += text.charAt(index);
+            setTimeout(function () {
+                typeWriter(element, text, index + 1, callback);
+            }, 150);
+        } else if (callback) {
+            callback();
+        }
+    }
+
+    function startContinuousTyping() {
+        typeWriter(greetingElement, greetingText, greetingIndex, function () {
+            typeWriter(nameElement, fullText, nameIndex, function () {
+                typeWriter(positionElement, positionText, positionIndex, function () {
+                    setTimeout(function () {
+                        greetingElement.innerHTML = "";
+                        nameElement.innerHTML = "";
+                        positionElement.innerHTML = "";
+                        startContinuousTyping();
+                    }, 2000);
+                });
+            });
+        });
+    }
+
+    startContinuousTyping();
+});
+
+
+
+
+
+</script>
