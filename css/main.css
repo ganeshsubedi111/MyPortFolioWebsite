@@ -1608,8 +1608,8 @@ header{
 }
 @media only screen and (max-width:768px) {
 	.intro-info img {
-		height: 7.8rem;
-		width: 7.8rem;
+		height: 15.8rem;
+		width: 13.8rem;
 	}
 	.intro-info .lead {
 		padding-left: 11rem;
@@ -1634,10 +1634,10 @@ header{
 		margin-top: 3rem;
 	}
 	.intro-info img {
-		height: 6.6rem;
-		width: 6.6rem;
-		float: none;
-		display: inline-block;
+		height: 13.6rem;
+        width: 10.6rem;
+        float: none;
+        display: inline-block;
 	}
 	.intro-info .lead {
 		padding-left: 0;
