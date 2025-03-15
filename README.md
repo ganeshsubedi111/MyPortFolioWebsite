@@ -50,7 +50,7 @@ Here are some of the projects I've worked on that showcase my skills:
 Feel free to reach out for collaborations, inquiries, or just to connect!
 
 - **Email**: [Your Email](mailto:your-subediganesh306@gmail.com)
-- **LinkedIn**: [Your LinkedIn Profile](#)
+- **LinkedIn**: [in/ganesh-subedi-13a62b269](#)
 - **GitHub**: [ganeshsubedi111](#)
 
 ## License
